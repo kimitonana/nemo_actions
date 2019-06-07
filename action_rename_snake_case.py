@@ -2,7 +2,7 @@
 
 #####################################################################
 #####################################################################
-## @author: Naoual ASKMI
+## @author: kimitonana
 ## @description: Nemo Action: 
 ##   rename file or directory by using snake_case naming conventions
 ##
@@ -24,8 +24,8 @@ with open(LOGFILE, 'a+') as logfile:
 
   for file_path in sys.argv[1:]:
     # extract file name and dir path from args.
-    file_name = file_path.split("/")[-1]
-    dir_path = '/'.join(file_path.split("/")[:-1])
+    file_name = file_path.split('/')[-1]
+    dir_path = '/'.join(file_path.split('/')[:-1])
     # construct new names.
     new_name = file_name.lower().replace(' ', '_')
     before, after = dir_path+'/'+file_name, dir_path+'/'+new_name

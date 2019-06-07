@@ -12,14 +12,14 @@
 Active=true
 # The name to show in the menu, locale supported with standard desktop spec.
 # **** REQUIRED ****
-Name=rename__:__snake__case
+Name=nemo__:__rename__snake__case
 # Tool tip, locale supported (Appears in the status bar)
 Comment=Rename file by snake_casing it.
 # What to run.  Enclose in < > to run an executable that resides in the actions folder.
 # **** REQUIRED ****
 Exec=<action_rename_snake_case.py %F>
 # Icon name to use in the menu - must be a theme icon name
-Icon-Name=ipython
+Icon-Name=python
 # What type selection: [s]ingle, [m]ultiple, any, notnone, none (background click), or
 # a number representing how many files must be selected to display.
 Selection=notnone
