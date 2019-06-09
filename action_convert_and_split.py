@@ -32,9 +32,8 @@ shnsplit = ['shnsplit', '-f', file_cue, '-t', '%n-%t', '-o flac', file_flac, '-d
 notify = ['notify-send', '-i', 'python', 'convert_and_split:: '+file_name+' album completed!']
 
 # launch bash commands
-if not os.path.isfile(file_cue):
-  # sometimes, you might not have the .cue file, only .flac file
-  # so we check that out first.
+if not os.path.isfile(file_flac):
+  # not need to convert cue file if we have already the flac
   subprocess.run(avconv)
 
 subprocess.run(shnsplit)
