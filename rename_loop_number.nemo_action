@@ -17,7 +17,7 @@ Name=nemo__:__rename__loop__number
 Comment=Rename all files using 4-digits number pattern
 # What to run.  Enclose in < > to run an executable that resides in the actions folder.
 # **** REQUIRED ****
-Exec=loop_number_rename.sh %P
+Exec=loop_number_rename.py %P
 # Icon name to use in the menu - must be a theme icon name
 Icon-Name=python
 # What type selection: [s]ingle, [m]ultiple, any, notnone, none (background click), or
