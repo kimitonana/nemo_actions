@@ -15,7 +15,13 @@ import sys
 import subprocess
 
 for file_path in sys.argv[1:]:
-  file_name = file_path.split('/')[-1].split('.')[0]
+  file_name_splitted = file_path.split('/')[-1].split('.')
+  if len(file_name_splitted) > 0:
+    # if file_name has already '.', concatenate each part with '.'
+    # except the last one (which refers to the extension)
+    file_name = '.'.join(map(str, file_name_splitted[0:-1]))
+  else:
+    file_name = file_name_splitted[0]
   dir_path  = '/'.join(file_path.split('/')[:-1])
   mp3       = dir_path+'/'+file_name+'.mp3'
   flac      = dir_path+'/'+file_name+'.flac'
