@@ -27,6 +27,6 @@ for file_path in sys.argv[1:]:
   flac      = dir_path+'/'+file_name+'.flac'
 
   # avconv -i "flacfile" -c:a libmp3lame -b:a 320k "mp3file"
-  avconv = ['avconv', '-i', flac, '-c:a', 'libmp3lame', '-b:a', '320k', mp3]
+  avconv = ['ffmpeg', '-i', flac, '-c:a', 'libmp3lame', '-b:a', '320k', mp3]
   print(avconv)
   subprocess.run(avconv)
